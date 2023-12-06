@@ -72,7 +72,7 @@ func prepareCropImages(filename string) {
 }
 
 func analizeImageText(ctx context.Context, client *vision.ImageAnnotatorClient) string {
-	  filelist := []string{
+	filelist := []string{
 		"tmp/date.png",
 		"tmp/type.png",
 		"tmp/u_percent.png",
@@ -81,7 +81,7 @@ func analizeImageText(ctx context.Context, client *vision.ImageAnnotatorClient) 
 		"tmp/u_time.png",
 		"tmp/s_time.png",
 		"tmp/g_time.png",
-	  }
+	}
 
 	str := ""
 	for _, file := range filelist {
@@ -113,7 +113,7 @@ func analizeImageText(ctx context.Context, client *vision.ImageAnnotatorClient) 
 					}
 					str += ","
 				}
-			}			
+			}
 		}
 	}
 	return str
@@ -124,7 +124,7 @@ func main() {
 
 	client, err := vision.NewImageAnnotatorClient(ctx)
 	if err != nil {
-	log.Fatalf("Failed to create client: %v", err)
+		log.Fatalf("Failed to create client: %v", err)
 	}
 	defer client.Close()
 
