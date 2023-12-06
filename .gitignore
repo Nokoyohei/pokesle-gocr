@@ -1,0 +1,5 @@
+memo
+*.PNG
+*.png
+result*
+google-cloud-vision-key.json
